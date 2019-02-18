@@ -19,7 +19,10 @@ contract marriage {
 
     function marriagestatus() public view returns (string memory){
         if (accepted){
-            return "Is marriage";
+            return "They are married";
+        }
+        else{
+            return "They are not married"
         }
     }
     function accept() public returns (string memory) {
