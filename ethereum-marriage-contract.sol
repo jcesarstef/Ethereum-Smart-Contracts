@@ -22,7 +22,7 @@ contract marriage {
             return "They are married";
         }
         else{
-            return "They are not married"
+            return "They are not married";
         }
     }
     function accept() public returns (string memory) {
