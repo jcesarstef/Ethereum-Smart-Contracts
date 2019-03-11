@@ -13,7 +13,7 @@ contract marriage {
 
     address public divorceRequestedBy;
     address public divorceRequestTo;
-    
+
     bool public divorceAccepted;
     uint256 public divorcedDate;
 
@@ -34,7 +34,7 @@ contract marriage {
                 return "Accepted";
         }
     }
-    
+
     function marriagestatus() public view returns (string memory){
         if (mariageAccepted == true && divorced == false){
             return "They are married";
@@ -43,7 +43,7 @@ contract marriage {
             return "They are not married";
         }
     }
-    
+
     function divorceRequest(address _to) public {
         if (_to == person1 || _to == person2){
             if (mariageAccepted == true){
@@ -53,13 +53,13 @@ contract marriage {
             }
         }
     }
-    
+
     function divorceRequestCancel() public{
         if (divorceRequestedBy == msg.sender && divorceAccepted == false){
             divorcedRequested = false;
         }
     }
-    
+
     function divorceAccept() public{
         if (msg.sender == divorceRequestTo){
             divorceAccepted = true;
