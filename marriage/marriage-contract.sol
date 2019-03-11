@@ -29,9 +29,9 @@ contract marriage {
 
     function mariageAccept() public returns (string memory) {
         if (msg.sender == person2 && mariageAccepted == false){
-                mariageAccepted = true;
-                marriageDate = now;
-                return "Accepted";
+            mariageAccepted = true;
+            marriageDate = now;
+            return "Accepted";
         }
     }
 
